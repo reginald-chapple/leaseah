@@ -1,0 +1,17 @@
+# Rental Categories
+ - Furniture
+ - Electronics
+ - Appliances
+ - Tools & Equipment
+ - Gaming
+ - Bags, Luggage
+ - Outdoor & Garden
+   - Patio
+   - Lawn Mowers
+   - Grills
+   - Coolers
+ - Computers and mobile
+ - Sports
+ - Fitness
+ - Arts & Music
+ - Miscellanous

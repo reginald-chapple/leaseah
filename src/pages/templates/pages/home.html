@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+    <h1>Home</h1>
+    <div class="">
+        {% if request.user.is_authenticated %}
+            <a href="{% url 'logout' %}" class="">Logout</a>
+        {% else %}
+            <a href="{% url 'login' %}" class="">Log in</a>
+            <a href="{% url 'registration:signup' %}" class="">Sign Up</a>
+        {% endif %}
+    </div>
+
+    <div class="row g-4">
+        {% for item in categories %}
+            {% if item.parent is None %}
+            <div class="col mb-3">
+                <h3>{{ item.name }}</h3>
+                <ul class="list-unstyled">
+                    {% for child in item.subcategories.all %}
+                        <li><a href="{% url "categories:search" child.pk %}">{{ child.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}
