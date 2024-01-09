@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'error_pages',
     'users',
     'rentals',
+    'direct_messages',
 ]
 
 MIDDLEWARE = [
